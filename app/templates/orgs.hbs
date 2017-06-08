@@ -1,0 +1,13 @@
+<h2>My Favorite Orgs</h2>
+
+<ul>
+  {{#each model as |org|}}
+  <li>
+    {{#link-to 'org' org.id}}
+      {{org.id}}
+    {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+
+{{outlet}}
