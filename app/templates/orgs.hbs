@@ -3,6 +3,7 @@
 <ul>
   {{#each model as |org|}}
   <li>
+    <span class="btn" {{action 'favoritedClicked' org}}>[ Favorite ]</span>
     {{#link-to 'org' org.id}}
       {{org.id}}
     {{/link-to}}
