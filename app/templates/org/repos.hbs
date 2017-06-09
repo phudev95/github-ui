@@ -1,9 +1,9 @@
 <h2>My Favorite Orgs</h2>
 
 <ul>
-  <li>{{#link-to 'org.repo' 'react'}}react{{/link-to}}</li>
-  <li>{{#link-to 'org.repo' 'react-native'}}react-native{{/link-to}}</li>
-  <li>{{#link-to 'org.repo' 'watchman'}}watchman{{/link-to}}</li>
+  {{#each model as |repo|}}
+    <li>{{#link-to 'org.repo' repo.name}} {{repo.name}} {{/link-to}}</li>
+  {{/each}}
 </ul>
 
 {{outlet}}

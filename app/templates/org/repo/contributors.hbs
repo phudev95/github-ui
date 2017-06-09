@@ -1,5 +1,9 @@
-
-
 {{outlet}}
 
 <h6>Contributors</h6>
+
+<ul>
+  {{#each model as |contributor|}}
+    <li>{{contributor.login}}</li>
+  {{/each}}
+</ul>

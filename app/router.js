@@ -24,14 +24,14 @@ Router.map(function() {
 
     // LIST OF REPO
     // org/jquery/repos
-    this.route('repos');
+    this.route('repos');//# API get repos of org
 
     // INDIVIDUAL REPO
-    // org/jquery/jquery-ui/contributors
     // org/jquery/jquery-ui/issues
+    // org/jquery/jquery-ui/contributors
     this.route('repo', {path: ':repoid'}, function() {
-      this.route('contributors');
-      this.route('issues');
+      this.route('issues');//# API get issues of repo that user clicked
+      this.route('contributors');//# API get contributors of repo that use clicked
     });
   });
 
