@@ -21,7 +21,7 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       //# Create new access-token at here: https://github.com/settings/tokens/new
-      GITHUB_ACCESS_TOKEN: 'a294a4d43d15e058d203144d603e6c8f0f9b1477'
+      GITHUB_ACCESS_TOKEN: '53a0053381a20c8d361c2e2eca0178dc45502f0d'
     }
   };
 
