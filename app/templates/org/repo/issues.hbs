@@ -1,3 +1,11 @@
 {{outlet}}
 
 <h6>Issues</h6>
+
+
+
+<ul>
+  {{#each model as |issue|}}
+    <li> <b>[{{issue.state}}]</b> {{issue.title}}</li>
+  {{/each}}
+</ul>

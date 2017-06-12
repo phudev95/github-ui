@@ -21,7 +21,6 @@ Router.map(function() {
 
   // INDIVIDUAL ORG
   this.route('org', {path: 'org/:id'}, function() {
-
     // LIST OF REPO
     // org/jquery/repos
     this.route('repos');//# API get repos of org
@@ -33,6 +32,7 @@ Router.map(function() {
       this.route('issues');//# API get issues of repo that user clicked
       this.route('contributors');//# API get contributors of repo that use clicked
     });
+    this.route('notfound');
   });
 
   // 404
