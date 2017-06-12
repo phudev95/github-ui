@@ -1,8 +1,19 @@
 <h2>My Favorite Orgs</h2>
 
+<!--
+  2 ways help me call component:
+  #1 With yield
+  {{#github-repo repo=r}}
+    <b>{{r.name}}</b>
+  {{/github-repo}}
+
+  #2 Empty yield
+  {{github-repo repo=r}}
+ -->
+
 <ul>
-  {{#each model as |repo|}}
-    <li>{{#link-to 'org.repo' repo.name}} {{repo.name}} {{/link-to}}</li>
+  {{#each model as |r|}}
+    {{github-repo repo=r}}
   {{/each}}
 </ul>
 

@@ -1,0 +1,6 @@
+<span class="btn" {{action 'favoriteWasClicked' org}}>[ Favorite ]</span>
+{{#link-to 'org' org.id}}
+  {{org.id}}
+{{/link-to}}
+
+{{yield}}
