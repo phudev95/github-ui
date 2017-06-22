@@ -37,6 +37,7 @@ Router.map(function() {
 
   // 404
   this.route('notfound', {path: '*path'});
+  this.route('timezones');
 });
 
 export default Router;
