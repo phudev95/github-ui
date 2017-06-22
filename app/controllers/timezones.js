@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import _ from 'lodash';
 
 export default Ember.Controller.extend({
     /* create array of timezones with name & offset */
@@ -15,6 +16,8 @@ export default Ember.Controller.extend({
 	},
 	selectedTimezone: null,
 	actions: {
+
+		
 		/* save a timezone record to our offline datastore */
 		add: function() {
 			var timezone = this.store.createRecord('timezone', {
@@ -27,8 +30,9 @@ export default Ember.Controller.extend({
 		remove: function(timezone) {
 			timezone.destroyRecord();
 		},
-		setSelectedTimezone: function(timezone) {
-			console.log('timezone: ', timezone);
+		setSelectedTimezone: function(timezoneName) {
+			var timezone = _.find(this.get('timezones'), {name: timezoneName});
+			this.set('selectedTimezone', timezone);
 		}
 	}
 });
